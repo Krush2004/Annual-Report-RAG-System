@@ -1,0 +1,45 @@
+```gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Virtual Environments
+env/
+venv/
+.venv/
+
+# Environment Variables
+.env
+
+# Streamlit
+.streamlit/
+
+# IDEs & Editors
+.vscode/
+.idea/
+*.swp
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Logs & Cache
+*.log
+.cache/
+__pypackages__/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Temporary & Upload Files
+*.tmp
+*.temp
+uploads/
+data/
+
+# Pinecone / Vector DB Artifacts
+pinecone/
