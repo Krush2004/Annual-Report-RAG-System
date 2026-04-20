@@ -9,7 +9,7 @@ def build_rag_components(vectorstore):
     retriever = vectorstore.as_retriever(search_kwargs={"k": 4})
 
     llm = ChatOpenAI(
-        model="mistralai/mistral-7b-instruct:free",
+        model="openai/gpt-4o-mini",
         temperature=0,
         api_key=OPENROUTER_API_KEY,
         base_url="https://openrouter.ai/api/v1"
