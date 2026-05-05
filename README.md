@@ -87,7 +87,7 @@ Annual-Report-RAG/
    ```env
    OPENROUTER_API_KEY=your_key
    PINECONE_API_KEY=your_key
-   PINECONE_INDEX=swiggy-rag
+   PINECONE_INDEX=annual-report-v3
    ```
 
 3. **Launch the Dashboard**

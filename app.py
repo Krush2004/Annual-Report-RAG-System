@@ -42,13 +42,8 @@ def inject_premium_css():
         /* Header Layout */
         .header-container {
             margin-top: -60px;
-            margin-bottom: 40px;
-            animation: fadeIn 1s ease-out;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
+            margin-bottom: 20px; /* Reduced gap */
+            animation: fadeIn 0.8s ease-out;
         }
 
         .premium-header {
@@ -89,7 +84,7 @@ def inject_premium_css():
         .header-separator {
             height: 1px;
             background: linear-gradient(90deg, rgba(96, 165, 250, 0), rgba(96, 165, 250, 0.5), rgba(167, 139, 250, 0.5), rgba(167, 139, 250, 0));
-            margin-bottom: 30px;
+            margin-bottom: 15px; /* Reduced gap */
         }
 
         /* Metric Cards */
@@ -114,10 +109,10 @@ def inject_premium_css():
         /* Chat Layout Improvements */
         .stChatMessage {
             background: rgba(15, 23, 42, 0.4) !important;
-            border-radius: 24px !important;
+            border-radius: 20px !important;
             border: 1px solid rgba(255, 255, 255, 0.03) !important;
-            padding: 1.5rem !important;
-            margin-bottom: 2rem !important;
+            padding: 1rem 1.25rem !important; /* Reduced for "chat little" */
+            margin-bottom: 1.5rem !important;
         }
 
         /* Input Experience */
@@ -147,6 +142,186 @@ def inject_premium_css():
             font-size: 1.5rem;
             margin-right: 10px;
         }
+
+        /* Sidebar Global Overrides */
+        [data-testid="stSidebar"] [data-testid="stVerticalBlock"] > div:has(button) {
+            margin-top: 5px;
+        }
+
+        /* Target Sidebar Buttons specifically (Excluding File Uploader) */
+        [data-testid="stSidebar"] .stButton button[kind="secondary"] {
+            background: rgba(239, 68, 68, 0.08) !important;
+            border: 1px solid rgba(239, 68, 68, 0.25) !important;
+            color: #fca5a5 !important;
+            border-radius: 10px !important;
+            width: 100% !important;
+            padding: 8px 12px !important;
+            font-size: 0.85rem !important;
+            font-weight: 500 !important;
+            transition: all 0.3s ease !important;
+            text-transform: none !important;
+        }
+
+        /* Restore File Uploader original aesthetic */
+        [data-testid="stSidebar"] [data-testid="stFileUploader"] button {
+            background: rgba(255, 255, 255, 0.05) !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            color: #e2e8f0 !important;
+            box-shadow: none !important;
+            transform: none !important;
+        }
+
+        [data-testid="stSidebar"] button[kind="secondary"]:hover {
+            background: rgba(239, 68, 68, 0.2) !important;
+            border-color: #f87171 !important;
+            color: #ffffff !important;
+            box-shadow: 0 0 20px rgba(239, 68, 68, 0.3) !important;
+            transform: translateY(-2px);
+        }
+
+        [data-testid="stSidebar"] h3 {
+            color: #a78bfa !important;
+            font-size: 0.9rem !important;
+            font-weight: 700 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.1rem !important;
+            margin-top: 1rem !important; /* Reduced from 2rem */
+            opacity: 0.8;
+        }
+
+        /* Sidebar Divider Tightening */
+        [data-testid="stSidebar"] hr {
+            margin-top: 0.5rem !important;
+            margin-bottom: 0.5rem !important;
+            height: 2px !important; /* Slightly bolder */
+            background: rgba(255, 255, 255, 0.15) !important;
+            border: none !important;
+            opacity: 0.3 !important;
+        }
+
+        /* Modern Typography-Led Design */
+        .status-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-top: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid transparent;
+        }
+
+        .sidebar-tip {
+            margin-top: 22px; /* Increased gap from 12px */
+            padding: 0 10px;
+            font-size: 0.75rem;
+            color: #64748b;
+            line-height: 1.5;
+        }
+
+        .sidebar-tip b {
+            color: #94a3b8;
+        }
+
+        .status-chip.success {
+            background: rgba(16, 185, 129, 0.1);
+            border-color: rgba(16, 185, 129, 0.2);
+            color: #34d399;
+        }
+
+        .status-chip.waiting {
+            background: rgba(245, 158, 11, 0.1);
+            border-color: rgba(245, 158, 11, 0.2);
+            color: #fbbf24;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            animation: pulse-dot 2s infinite;
+        }
+
+        .status-chip.success .status-dot {
+            background: #10b981;
+            box-shadow: 0 0 10px #10b981;
+        }
+
+        .status-chip.waiting .status-dot {
+            background: #f59e0b;
+            box-shadow: 0 0 10px #f59e0b;
+        }
+
+        @keyframes pulse-dot {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.4); opacity: 0.5; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .modern-welcome-container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 40vh; /* Reduced from 60vh to prevent scrollbar */
+            margin: 0 auto;
+            max-width: 850px;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modern-welcome-container h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 0.2rem; /* Significantly reduced from 0.8rem */
+            letter-spacing: -0.15rem;
+            color: #f1f5f9;
+            line-height: 1;
+        }
+
+        .modern-welcome-container h1 span {
+            background: linear-gradient(90deg, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(96, 165, 250, 0.2);
+        }
+
+        .modern-welcome-container p {
+            color: #94a3b8;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem; /* Significantly reduced from 4rem */
+            font-weight: 300;
+            max-width: 550px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .sidebar-tip b {
+            color: #94a3b8;
+        }
+
+        .unique-mission {
+            font-size: 0.7rem;
+            color: #60a5fa;
+            letter-spacing: 0.12rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            padding: 5px 15px;
+            border: 1px solid rgba(96, 165, 250, 0.25);
+            background: rgba(96, 165, 250, 0.05);
+            border-radius: 50px;
+            display: inline-block;
+            backdrop-filter: blur(5px);
+        }
+
         </style>
     """, unsafe_allow_html=True)
 
@@ -205,20 +380,25 @@ def is_not_found_answer(answer: str) -> bool:
     ]
     return any(t in answer.lower() for t in strict_triggers)
 
-def prioritize_docs(docs, query_type):
-    """Sort chunks based on query intent"""
-    if query_type == "financial":
-        return sorted(docs, key=lambda d: any(k in d.page_content.lower() for k in FINANCIAL_KEYWORDS), reverse=True)
-    if query_type == "metric":
-        # Boost chunks with digits and metric keywords
-        return sorted(docs, key=lambda d: (any(c.isdigit() for c in d.page_content), any(k in d.page_content.lower() for k in BUSINESS_METRIC_KEYWORDS)), reverse=True)
-    if query_type == "leadership":
-        # Boost chunks that mention leadership roles
-        return sorted(docs, key=lambda d: any(k in d.page_content.lower() for k in LEADERSHIP_KEYWORDS), reverse=True)
-    if query_type == "strategy":
-        # Boost chunks that mention acquisitions and impact
-        return sorted(docs, key=lambda d: any(k in d.page_content.lower() for k in STRATEGY_KEYWORDS), reverse=True)
-    return docs
+def prioritize_docs(docs, query, query_type):
+    """Sort chunks based on relevance score (Keyword Overlap + Intent Boost)"""
+    stop_words = {"what", "which", "year", "did", "the", "was", "how", "many", "describe", "explain", "tell", "show"}
+    query_keywords = [w.lower() for w in query.split() if len(w) > 3 and w.lower() not in stop_words]
+    
+    def score_doc(doc):
+        content = doc.page_content.lower()
+        # Base Score: Keyword Overlap
+        score = sum(1.5 for kw in query_keywords if kw in content)
+        
+        # Intent Boosts
+        if query_type == "financial" and any(k in content for k in FINANCIAL_KEYWORDS): score += 2.0
+        if query_type == "strategy" and any(k in content for k in STRATEGY_KEYWORDS): score += 2.0
+        if query_type == "metric" and any(k in content for k in BUSINESS_METRIC_KEYWORDS): score += 2.0
+        if any(c.isdigit() for c in content): score += 0.5 # Digits boost for numbers/years
+        
+        return score
+
+    return sorted(docs, key=score_doc, reverse=True)
 
 def compute_confidence(query, docs):
     if not docs:
@@ -253,11 +433,20 @@ def compute_confidence(query, docs):
         if any(k in content_lower for k in FINANCIAL_KEYWORDS):
             fin_bonus = 0.1
             
-        scores.append(base_score + noun_bonus + fin_bonus)
+        # Phrase Bonus (Sequential matches)
+        phrase_bonus = 0.0
+        query_words_list = query.lower().split()
+        for i in range(len(query_words_list)-1):
+            phrase = f"{query_words_list[i]} {query_words_list[i+1]}"
+            if phrase in content_lower:
+                phrase_bonus += 0.1
+            
+        scores.append(base_score + noun_bonus + fin_bonus + phrase_bonus)
 
-    # Use a more generous average but clamp at 100
-    avg_score = sum(scores) / len(scores)
-    final_score = min(1.0, avg_score * 1.8) # Boost scaling for better representation
+    # FOCUS on Top 3 docs (quality over quantity)
+    top_scores = sorted(scores, reverse=True)[:3]
+    avg_score = sum(top_scores) / len(top_scores)
+    final_score = min(1.0, avg_score * 1.4) 
     
     return round(final_score * 100, 1)
 
@@ -268,7 +457,7 @@ def post_answer_completeness_check(answer: str, docs):
     answer_lower = answer.lower()
     missing = []
 
-    for k in FINANCIAL_DRIVER_KEYWORDS:
+    for k in FINANCIAL_KEYWORDS:
         if any(k in d.page_content.lower() for d in docs) and k not in answer_lower:
             missing.append(k)
 
@@ -307,31 +496,26 @@ def extract_page_citations(docs, offset=0):
 
 def highlight_sentences(text, query):
     sentences = re.split(r'(?<=[.!?])\s+', text)
-    query_words = set(query.lower().split())
+    stop_words = {"what", "which", "year", "did", "the", "was", "how", "many"}
+    query_words = [w.lower() for w in query.split() if len(w) > 3 and w.lower() not in stop_words]
 
     output = []
     for sent in sentences:
-        overlap = sum(word in sent.lower() for word in query_words)
-        if overlap >= 2:
+        sent_lower = sent.lower()
+        # High-relevance sentences often contain multiple query keywords
+        matches = sum(1 for word in query_keywords if word in sent_lower) if 'query_keywords' in locals() else sum(1 for word in query_words if word in sent_lower)
+        
+        # Basic Fuzzy check for typos (matches prefix of long words)
+        for word in query_words:
+            if len(word) > 6 and word[:4] in sent_lower:
+                matches += 0.5
+
+        if matches >= 1.5:
             output.append(f"**🟡 {sent}**")
         else:
             output.append(sent)
 
     return " ".join(output)
-
-
-def compute_confidence(query, docs):
-    if not docs:
-        return 0.0
-
-    query_words = set(query.lower().split())
-    scores = []
-
-    for doc in docs:
-        overlap = sum(w in doc.page_content.lower() for w in query_words)
-        scores.append(overlap / max(len(query_words), 1))
-
-    return round(min(1.0, sum(scores) / len(scores)) * 100, 1)
 
 
 def confidence_label(score):
@@ -344,26 +528,29 @@ def confidence_label(score):
 
 def merge_evidence_by_section(docs):
     """
-    Merge multi-page evidence and remove duplicate chunks
+    Merge multi-page evidence and remove duplicate chunks while preserving relevance order.
+    Returns a list of tuples: [(section_name, [docs])]
     """
     merged = {}
-    seen_texts = set()
-
+    seen_content = set()
+    section_order = []
+    
     for doc in docs:
-        section = doc.metadata.get("section", "General")
-        text_key = doc.page_content.strip()[:300]
-
-        if text_key in seen_texts:
+        section = doc.metadata.get("section", "General Business")
+        content = doc.page_content.strip()
+        
+        # Check for near-duplicates
+        content_hash = content[:100]
+        if content_hash in seen_content:
             continue
-
-        seen_texts.add(text_key)
-
+        seen_content.add(content_hash)
+        
         if section not in merged:
             merged[section] = []
-
+            section_order.append(section)
         merged[section].append(doc)
-
-    return merged
+        
+    return [(s, merged[s]) for s in section_order]
 
 
 # -------------------- Sidebar --------------------
@@ -384,9 +571,25 @@ with st.sidebar:
     
     # System Status
     if uploaded_pdf:
-        st.success("✅ Document Loaded")
+        st.sidebar.markdown("""
+            <div class="status-chip success">
+                <div class="status-dot"></div>
+                Document Ready
+            </div>
+            <div class="sidebar-tip">
+                💡 <b>Pro Tip:</b> Ask about specific financial metrics or strategy risks for the best results.
+            </div>
+        """, unsafe_allow_html=True)
     else:
-        st.info("💡 Waiting for PDF upload...")
+        st.sidebar.markdown("""
+            <div class="status-chip waiting">
+                <div class="status-dot"></div>
+                Awaiting Upload
+            </div>
+            <div class="sidebar-tip">
+                💡 <b>System Tip:</b> Use searchable OCR PDFs for 100% accurate evidence grounding.
+            </div>
+        """, unsafe_allow_html=True)
 
 
 def initialize_rag(pdf_path):
@@ -426,18 +629,27 @@ if uploaded_pdf:
         st.session_state.messages = []
 
     # Display chat history
-    for message in st.session_state.messages:
-        with st.chat_message(message["role"]):
-            st.markdown(message["content"])
-            
-            # Show Supporting Evidence if it exists in history
-            if "evidence" in message and message["evidence"]:
-                with st.expander("📄 Supporting Evidence (Proof)"):
-                    st.markdown(message["evidence"], unsafe_allow_html=True)
-            
-            if "stats" in message:
-                with st.expander("📊 Analysis Details"):
-                    st.markdown(message["stats"], unsafe_allow_html=True)
+    if st.session_state.messages:
+        for message in st.session_state.messages:
+            with st.chat_message(message["role"]):
+                st.markdown(message["content"])
+                
+                # Show Supporting Evidence if it exists in history
+                if "evidence" in message and message["evidence"]:
+                    with st.expander("📄 Supporting Evidence (Proof)"):
+                        st.markdown(message["evidence"], unsafe_allow_html=True)
+                
+                if "stats" in message:
+                    with st.expander("📊 Analysis Details"):
+                        st.markdown(message["stats"], unsafe_allow_html=True)
+    else:
+        # Render Modern Typography Dashboard
+        st.markdown(f"""
+            <div class="modern-welcome-container">
+                <h1>Analyze. <span>Verified.</span></h1>
+                <p>Grounded analysis of <b>{st.session_state.processed_filename}</b> is ready. <br>Ask a specific question below to begin your analysis.</p>
+            </div>
+        """, unsafe_allow_html=True)
 
     # Use chat input for better UX
     query = st.chat_input("Ask a question about the report...")
@@ -460,29 +672,29 @@ if uploaded_pdf:
         # Generate Evidence HTML for persistence (with HYPER-STRICT filtering)
         evidence_html = ""
         q_type = detect_query_type(query)
-        source_docs = prioritize_docs(retrieved_docs, q_type)
+        source_docs = prioritize_docs(retrieved_docs, query, q_type)
         
         SMART_OFFSET = -2
 
         if not is_not_found_answer(answer):
-            merged = merge_evidence_by_section(source_docs)
+            ordered_evidence = merge_evidence_by_section(source_docs)
             section_count = 0
             
-            # Identify Proper Nouns in query (e.g., 'Dineout')
-            stop_words = {"what", "was", "the", "of", "in", "and", "to", "for", "is", "on", "that", "how", "impact"}
-            proper_nouns_query = [w.lower() for w in query.split() if w[0].isupper() and w.lower() not in stop_words]
+            # Extract significant keywords for filtering (Case-Insensitive)
+            stop_words = {"what", "which", "year", "did", "the", "was", "how", "many", "describe", "explain", "tell", "show"}
+            query_keywords = [w.lower() for w in query.split() if len(w) > 3 and w.lower() not in stop_words]
 
-            for section, docs in merged.items():
+            for section, docs in ordered_evidence:
                 if section_count >= 3: break 
                 
                 filtered_docs = []
                 for d in docs:
                     d_content = d.page_content.lower()
                     
-                    # HYPER-STRICT: If we have proper nouns in query, they MUST be in the doc
-                    if proper_nouns_query:
-                        if not any(pn in d_content for pn in proper_nouns_query):
-                            continue # Skip noise that doesn't mention the core subject
+                    # If we have keywords, ensure at least one matches to prevent unrelated noise
+                    if query_keywords:
+                        if not any(kw in d_content for kw in query_keywords):
+                            continue 
                     
                     filtered_docs.append(d)
                 
@@ -536,5 +748,11 @@ if uploaded_pdf:
         st.rerun()
 
 else:
-    st.info("Please upload an Annual Report PDF in the sidebar to begin.")
+    st.markdown("""
+<div class="modern-welcome-container">
+    <div class="unique-mission">Zero-Hallucination Audit Engine</div>
+    <h1>Precision <span>Audit.</span></h1>
+    <p>High-precision institutional research grounded in physical page verification. <br>Upload a document in the sidebar to begin.</p>
+</div>
+""", unsafe_allow_html=True)
 

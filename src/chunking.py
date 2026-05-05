@@ -3,8 +3,8 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 def split_documents(documents):
     splitter = RecursiveCharacterTextSplitter(
-        chunk_size=900,
-        chunk_overlap=200
+        chunk_size=1200,
+        chunk_overlap=250
     )
 
     chunks = splitter.split_documents(documents)
@@ -28,8 +28,9 @@ def split_documents(documents):
 
         # -------- Financial Performance --------
         elif any(k in text for k in [
-            "revenue", "profit", "loss", "ebitda", "commission", 
-            "advertising", "margin", "income", "expense", "financial summary"
+            "revenue", "profit", "loss", "ebitda", "ebit", "commission", 
+            "advertising", "margin", "income", "expense", "financial summary",
+            "dividend", "cash flow", "balance sheet", "pnl", "tax", "audit"
         ]):
             doc.metadata["section"] = "Financial Performance"
 
@@ -43,7 +44,8 @@ def split_documents(documents):
         # -------- Strategy & Acquisitions --------
         elif any(k in text for k in [
             "acquisition", "acquired", "merger", "integrated", 
-            "synergy", "expansion", "piloted", "venture", "partnership"
+            "synergy", "expansion", "piloted", "venture", "partnership",
+            "future", "growth", "roadmap", "invest", "funding"
         ]):
             doc.metadata["section"] = "Strategy & Acquisitions"
 
