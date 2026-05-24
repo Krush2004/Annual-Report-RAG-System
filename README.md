@@ -8,7 +8,6 @@
   <img src="https://img.shields.io/badge/Gemini-AI-blueviolet">
   <img src="https://img.shields.io/badge/VectorDB-Pinecone-purple">
   <img src="https://img.shields.io/badge/Deploy-Streamlit%20Cloud-red?logo=streamlit">
-  <img src="https://img.shields.io/badge/License-MIT-yellow">
 </p>
 
 ## ✨ Premium Features
