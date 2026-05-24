@@ -10,7 +10,6 @@
   <img src="https://img.shields.io/badge/Deploy-Streamlit%20Cloud-red?logo=streamlit">
   <img src="https://img.shields.io/badge/License-MIT-yellow">
 </p>
----
 
 ## ✨ Premium Features
 
