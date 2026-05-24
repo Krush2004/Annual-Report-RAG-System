@@ -1,9 +1,22 @@
 # 🛡️ Annual Report AI: Premium RAG Intelligence
 
-[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://streamlit.io/)
-[![Vector DB: Pinecone](https://img.shields.io/badge/Vector%20DB-Pinecone-blueviolet)](https://www.pinecone.io/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+<p align="left">
+  <a href="https://www.python.org/downloads/">
+    <img src="https://img.shields.io/badge/python-3.9+-blue.svg">
+  </a>
+
+  <a href="https://streamlit.io/">
+    <img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg">
+  </a>
+
+  <a href="https://www.pinecone.io/">
+    <img src="https://img.shields.io/badge/Vector_DB-Pinecone-blueviolet">
+  </a>
+
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/badge/License-MIT-yellow.svg">
+  </a>
+</p>
 
 A **production-grade, stealth-themed RAG (Retrieval-Augmented Generation)** dashboard designed for deep financial analysis. This system transforms complex Annual Reports into interactive, evidence-backed insights with zero hallucinations.
 
