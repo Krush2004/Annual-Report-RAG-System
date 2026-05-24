@@ -1,22 +1,20 @@
 # 🛡️ Annual Report AI: Premium RAG Intelligence
 
-<p align="left">
-  <a href="https://www.python.org/downloads/">
-    <img src="https://img.shields.io/badge/python-3.9+-blue.svg">
-  </a>
+[![Python 3.9+](https://img.shields.io/badge/Python-3.9+-blue?logo=python&logoColor=white)](https://www.python.org/)
 
-  <a href="https://streamlit.io/">
-    <img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg">
-  </a>
+[![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)
 
-  <a href="https://www.pinecone.io/">
-    <img src="https://img.shields.io/badge/Vector_DB-Pinecone-blueviolet">
-  </a>
+[![LangChain](https://img.shields.io/badge/LangChain-Framework-green)](https://www.langchain.com/)
 
-  <a href="https://opensource.org/licenses/MIT">
-    <img src="https://img.shields.io/badge/License-MIT-yellow.svg">
-  </a>
-</p>
+[![RAG](https://img.shields.io/badge/RAG-Retrieval%20Augmented%20Generation-orange)]()
+
+[![Gemini](https://img.shields.io/badge/Gemini-AI-blueviolet)](https://deepmind.google/technologies/gemini/)
+
+[![Vector DB](https://img.shields.io/badge/VectorDB-Pinecone-purple)](https://www.pinecone.io/)
+
+[![Deploy](https://img.shields.io/badge/Deploy-Streamlit%20Cloud-red?logo=streamlit)](https://streamlit.io/cloud)
+
+[![License](https://img.shields.io/badge/License-MIT-yellow)](https://opensource.org/licenses/MIT)
 
 A **production-grade, stealth-themed RAG (Retrieval-Augmented Generation)** dashboard designed for deep financial analysis. This system transforms complex Annual Reports into interactive, evidence-backed insights with zero hallucinations.
 
