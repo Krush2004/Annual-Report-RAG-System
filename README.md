@@ -1,23 +1,15 @@
 # 🛡️ Annual Report AI: Premium RAG Intelligence
 
-[![Python 3.9+](https://img.shields.io/badge/Python-3.9+-blue?logo=python&logoColor=white)](https://www.python.org/)
-
-[![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)
-
-[![LangChain](https://img.shields.io/badge/LangChain-Framework-green)](https://www.langchain.com/)
-
-[![RAG](https://img.shields.io/badge/RAG-Retrieval%20Augmented%20Generation-orange)]()
-
-[![Gemini](https://img.shields.io/badge/Gemini-AI-blueviolet)](https://deepmind.google/technologies/gemini/)
-
-[![Vector DB](https://img.shields.io/badge/VectorDB-Pinecone-purple)](https://www.pinecone.io/)
-
-[![Deploy](https://img.shields.io/badge/Deploy-Streamlit%20Cloud-red?logo=streamlit)](https://streamlit.io/cloud)
-
-[![License](https://img.shields.io/badge/License-MIT-yellow)](https://opensource.org/licenses/MIT)
-
-A **production-grade, stealth-themed RAG (Retrieval-Augmented Generation)** dashboard designed for deep financial analysis. This system transforms complex Annual Reports into interactive, evidence-backed insights with zero hallucinations.
-
+<p align="left">
+  <img src="https://img.shields.io/badge/Python-3.9+-blue?logo=python&logoColor=white">
+  <img src="https://img.shields.io/badge/Streamlit-App-FF4B4B?logo=streamlit&logoColor=white">
+  <img src="https://img.shields.io/badge/LangChain-Framework-green">
+  <img src="https://img.shields.io/badge/RAG-Retrieval%20Augmented%20Generation-orange">
+  <img src="https://img.shields.io/badge/Gemini-AI-blueviolet">
+  <img src="https://img.shields.io/badge/VectorDB-Pinecone-purple">
+  <img src="https://img.shields.io/badge/Deploy-Streamlit%20Cloud-red?logo=streamlit">
+  <img src="https://img.shields.io/badge/License-MIT-yellow">
+</p>
 ---
 
 ## ✨ Premium Features
